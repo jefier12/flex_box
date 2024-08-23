@@ -1,0 +1,26 @@
+.contenedor2{
+  max-width: 1200px;
+  height: 100vh;
+  border: solid 1px whitesmoke;
+  margin: 0 auto;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.item2{
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  border: solid 1px gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor .item:nth-child(3){
+  background-color: slateblue;
+  order: -1;
+}

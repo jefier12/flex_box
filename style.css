@@ -4,39 +4,47 @@
   box-sizing: border-box;
 }
 
+/* contenedor 1 */
 .contenedor{
   max-width: 1200px;
   height: 100vh;
   border: solid 1px whitesmoke;
   margin: 0 auto;
   background: black;
+
   display: flex;
   /* display: inline-flex; */
 
   flex-direction: row;
-  /* flex-direction: row-reverse;
-  flex-direction: column;
-  flex-direction: column-reverse;
-  flex-wrap: nowrap;
-  flex-wrap: wrap;
-  flex-flow: column wrap; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
+  /* flex-flow: column wrap; */
 
-  /* justify-content: flex-start;
-  justify-content: flex-end;
-  justify-content: center;
-  justify-content: space-between;
-  justify-content: space-around;
-  justify-content: space-evenly;  */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
 
-  align-items: flex-start;
-  /* align-items: flex-end;
-  align-items: center;
-  align-items: stretch;
-  align-items: baseline; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+  /* align-items: stretch; */
+  /* align-items: baseline; */
+
+  align-content: flex-start;
+  /* align-content: flex-end; */
+  /* align-content: space-between; */
+  /* align-content: space-around; */
+  /* align-content: space-evenly; */
   
 }
 
-.item--hover{
+.item{
   width: 200px;
   height: 200px;
   background-color: #ffffff;
@@ -44,27 +52,28 @@
   border: solid 1px gray;
 }
 
-.item--hover:hover{
-  background: rgba(20, 173, 104, 0.656);
+.contenedor .item:nth-child(3){
+  background-color: slateblue;
+  order: -1;
+}
+
+@media (max-width:800px){
+
+  .contenedor{
+    background-color: #ffffff;
+    flex-direction: column;
+  }
+
+  .contenedor .item:nth-child(3){
+    background-color: slateblue;
+    order: 1;
+  }
 }
 
 
-.contenedor2{
-  max-width: 1200px;
-  height: 100vh;
-  border: solid 1px whitesmoke;
-  margin: 0 auto;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-}
 
-.item2{
-  width: 200px;
-  height: 200px;
-  background-color: #ffffff;
-  border: solid 1px gray;
-  justify-content: center;
-}
+
+
+
+
