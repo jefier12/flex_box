@@ -1,89 +1,163 @@
-body{
+body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    background-color: #a06767;
+}
+:root{
+    --encabezado:#4c9572;
+    --telefono:#111111;
+    --titulos:#ffffff;
+    --chat:#322f2f;
+    --mensaje:#808080;
+    --burbuja:#37ff00;
+    --sombra:0 2px 5px rgba(0, 0, 0, 0.1);;
 }
 
-.celular{
-    height: 90vh;
+.telefono {
     max-width: 450px;
-    background: #ffefd8;
+    height: 850px;
     margin: 0 auto;
-    border-radius: 20px 20px 0 0;
-    overflow-y: scroll;
+    background: var(--telefono);
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
 }
-.celular__encabezado{
-    height: 130px;
-    width: 100%;
-    background:#4c9572 ;
+
+/* Encabezado */
+.telefono__encabezado {
+    background: var(--encabezado);
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 20px 20px 0 0;
 }
-.celular__titulo{
-    padding: 0 10px;
-    color: #fff;
-    
+
+.telefono__titulo {
+    color: var(--titulos);
+    margin: 0;
+    font-size: 24px;
 }
-.celular__iconos{
-    /* display: flex; */
+
+.telefono__iconos {
+    display: flex;
+    gap: 10px;
     background-color: transparent;
     border: none;
-    color: #fff;
+    color: var(--titulos);
     cursor: pointer;
     font-size: 30px;
-
 }
-.celular__items{
+
+.telefono__icono {
+    background-color: transparent;
+    border: none;
+    color: var(--titulos);
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* Navegación de pestañas */
+.telefono__pestañas {
     display: flex;
-    background-color:#4c9572;
-    color: #fff;
     justify-content: space-around;
+    background-color: var(--encabezado);
+    color: var(--titulos);
     font-size: 20px;
-    padding-bottom: 10px;
+    padding: 10px 0;
 }
-.celular__img{
-    height: 70px;
-    width: 70px;
+
+.telefono__pestaña {
+    cursor: pointer;
+}
+
+.telefono__pestaña--activa {
+    border-bottom: 3px solid var(--titulos);
+}
+
+/* Secciones */
+.telefono__seccion {
+    display: none;
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    
+}
+
+.telefono__seccion--activa {
+    display: block;
+}
+
+/* Imagen de perfil */
+.chat__imagen {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 20px;
+    object-fit: cover;
 }
-.celular__chats{
-    height: 80px;
+
+/* Contenedor de chats */
+.telefono__seccion--activa {
     display: flex;
-    gap: 30px;
-    align-items: center;
     flex-direction: column;
+    gap: 10px;
 }
 
-.celular__perfil{
-    height: 100%;
-}
-.celular__nombre{
-    font-weight:bold;
+/* Arreglo de cada chat */
+.chat {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--chat);
+    border-radius: 10px;
+    box-shadow:var(--sombra);
+    margin-bottom: 3px;
 }
 
-.celular__notificacion{
-    height: 80px;
-    padding-left: 180px;
-    /* display: flex; */
-    flex-direction: column;
-    align-items: center;
+/* Perfil del chat */
+.chat__informacion {
+    flex: 1;
+    margin-left: 10px;
 }
-.celular__burbuja{
-    height: 20px;
+
+.chat__nombre {
+    font-weight: bold;
+    margin: 0;
+    color: var(--titulos);
+}
+
+
+.chat__mensaje {
+    color: var(--mensaje);
+    margin: 0;
+}
+
+/* Notificaciones */
+.chat__notificacion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+/* hora */
+.chat__hora {
+    font-size: 12px;
+    color:var(--mensaje);
+}
+
+/* icono de notificacion */
+.chat__burbuja {
     width: 20px;
-
-    border-radius:50% ;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #37ff00;
+    background: var(--burbuja);
+    border-radius: 50%;
+    color: var(--titulos);
+    font-size: 12px;
     border: none;
-}
-
-.celular__arreglo{
-    width: 100%;
-    display: flex;
 }
